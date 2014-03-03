@@ -16,7 +16,7 @@ else:
 
 
 class ChameleonGenshiRenderer(RendererFactory):
-    engines = ['chameleon_genshi']
+    engines = {'chameleon_genshi': {'content_type': 'text/html'}}
     with_tg_vars = True
 
     format_for_content_type = {
