@@ -44,8 +44,8 @@ class ChameleonGenshiRenderer(RendererFactory):
             TemplateLoader = ChameleonGenshiTemplateLoader
             template_loader_args = {}
 
-        loader = TemplateLoader(search_path=config.paths.templates,
-                                auto_reload=config.auto_reload_templates,
+        loader = TemplateLoader(search_path=config['paths']['templates'],
+                                auto_reload=config['auto_reload_templates'],
                                 **template_loader_args)
 
         return {'chameleon_genshi': cls(loader, config)}
